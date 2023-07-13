@@ -27,3 +27,29 @@ int main() {
 	}
 	return 0;
 }
+
+
+// 학원 풀이
+/*
+#include <stdio.h>
+
+int arr[101];
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		arr[i] = i;
+	}
+	while (1) {
+		if (n == 1) break;
+		int tmp = 0;
+		for (int i = 2; i <= n; i+=2) {
+			arr[++tmp] = arr[i];
+		}
+		n = tmp;
+	}
+	printf("%d", arr[1]);
+	return 0;
+}
+*/
