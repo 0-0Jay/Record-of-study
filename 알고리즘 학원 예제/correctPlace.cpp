@@ -1,3 +1,5 @@
+// 백준 25400번 제자리 : https://www.acmicpc.net/problem/25400
+
 #include <stdio.h>
 
 int n, tmp = 1, num, cnt;
