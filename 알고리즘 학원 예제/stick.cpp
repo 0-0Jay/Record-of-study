@@ -6,7 +6,7 @@ using namespace std;
 int stk[100010], k = -1;
 
 int main() {
-	int n, e;
+	int n;
 	scanf("%d", &n);
 	for (int i = 0; i < n; i++) {
 		int now;
