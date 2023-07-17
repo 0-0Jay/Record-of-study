@@ -33,3 +33,33 @@ int main() {
 	printf("%d", cnt);
 	return 0;
 }
+
+
+// 학원 풀이
+/*
+#include <stdio.h>
+using namespace std;
+
+char arr[21000];
+int cnt;
+
+int main() {
+	int n, m;
+	scanf("%d %d", &n, &m);
+	scanf("%s", arr);
+	for (int i = 0; i < n; i++) {
+		if (arr[i] == 'P') {
+			for (int j = i - m; j <= i + m; j++) {  // 사람을 찾아서 좌우로 m칸 검사해서 가장 왼쪽의 햄버거 분배
+				if (j < 0 || j > n - 1) continue;  // 탐색 범위가 문자열 범위를 벗어나면 continue로 오류 방지
+				if (arr[j] == 'H') {
+					cnt++;
+					arr[j] = 0;
+					break;
+				}
+			}
+		}
+	}
+	printf("%d", cnt);
+	return 0;
+}
+*/
