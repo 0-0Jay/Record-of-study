@@ -1,4 +1,4 @@
-// 백준 15649번 N과 M(1) : 
+// 백준 15649번 N과 M(1) : https://www.acmicpc.net/problem/15649
 
 #include<stdio.h>
 #include<algorithm>
