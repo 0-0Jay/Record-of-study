@@ -1,3 +1,5 @@
+// 백준 1149번 RGB 거리 : https://www.acmicpc.net/problem/1149
+
 #include <stdio.h>
 #include <algorithm>
 #define M 1001
