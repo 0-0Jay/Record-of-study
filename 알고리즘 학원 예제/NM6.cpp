@@ -5,7 +5,7 @@
 #define M 10
 using namespace std;
 
-int num[M], arr[M], chk[M], n, m;
+int num[M], arr[M], n, m;
 
 void DFS(int d, int now) {
 	if (d == m) {
