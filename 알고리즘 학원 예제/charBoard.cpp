@@ -6,7 +6,7 @@
 #define M 101
 using namespace std;
 
-char alp[M][M], target[90];
+char alp[M][M], target[M];
 int cnt, dx[4] = { 0, 1, 0, -1 }, dy[4] = { 1, 0, -1, 0 }, k, dp[M][M][M], sum;
 
 int main() {
