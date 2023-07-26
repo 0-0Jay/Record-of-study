@@ -1,3 +1,5 @@
+// 백준 1987번 알파벳 : https://www.acmicpc.net/problem/1987
+
 #include <stdio.h>
 #include <algorithm>
 using namespace std;
