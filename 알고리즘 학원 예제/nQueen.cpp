@@ -1,3 +1,5 @@
+// 백준 9663번 N-Queen : https://www.acmicpc.net/problem/9663
+
 #include<stdio.h>
 #include<algorithm>
 using namespace std;
@@ -14,7 +16,7 @@ void queen(int c, int d) {
 		board[c] = i;
 		if (c > 0) {
 			for (int j = 0; j < c; j++) {
-				if (abs(board[c] - board[j]) == c - j || board[c] == board[j]) {  // 이전 가로줄에 놓인 수들 중 대각선상에 위치한 퀸 체크
+				if (abs(board[c] - board[j]) == c - j || board[c] == board[j]) {  // 이전 가로줄에 놓인 퀸들 중 같은 대각/세로줄에 놓인 퀸이 있으면 체크
 					check = 1;
 					break;
 				}
