@@ -19,7 +19,7 @@ void virus(int x, int y) {
 			int a = now.first + dx[i];
 			int b = now.second + dy[i];
 			if (a > -1 && a < n && b > -1 && b < m && tmp[a][b] == 0) {
-				tmp[a][b] = 1;  // 바이러스가 퍼진 곳은 벽과 
+				tmp[a][b] = 1;  // 바이러스가 퍼진 곳은 벽으로 전환해도 무관(0의 갯수만 필요하기 때문)
 				v++;
 				que.push({ a,b });
 			}
@@ -28,17 +28,17 @@ void virus(int x, int y) {
 }
 
 void wall(int a, int d) {
-	if (d == 3) {
-		v = 0;
-		copy(&arr[0][0], &arr[0][0] + 64, &tmp[0][0]);
+	if (d == 3) {  // 벽을 3개 세웠으면 수행
+		v = 0;  // v를 0으로 초기화
+		copy(&arr[0][0], &arr[0][0] + 64, &tmp[0][0]);  // arr배열에 BFS 탐색을 하지 않고 tmp에 복사하여 탐색
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				if (tmp[i][j] == 2) {
+				if (tmp[i][j] == 2) {  // 전체 탐색 중 바이러스 발견 시 BFS 탐색 시작
 					virus(i, j);
 				}
 			}
 		}
-		if (minv > v) minv = v;
+		if (minv > v) minv = v;  // 바이러스 갯수의 최소값 계산
 		return;
 	}
 	for (int i = a + 1; i < n * m; i++) {  // 1차원처럼 계산하여 코드 단순화
@@ -59,6 +59,6 @@ int main() {
 		}
 	}
 	wall(-1, 0);
-	printf("%d", safe - minv - 3);
+	printf("%d", safe - minv - 3);  // 총 안전구역 - 최소 바이러스 갯수 - 벽 개수
 	return 0;
 }
