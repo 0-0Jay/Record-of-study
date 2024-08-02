@@ -1,0 +1,9 @@
+# 프로그래머스  - 가장 가까운 같은 글자 : https://school.programmers.co.kr/learn/courses/30/lessons/142086
+
+def solution(s):
+    alp = {}
+    answer = []
+    for i in range(len(s)):
+        answer.append(-1 if s[i] not in alp else i - alp[s[i]])
+        alp[s[i]] = i            
+    return answer
